@@ -1,0 +1,9 @@
+{
+  "error": {
+    "code": "zone_not_found",
+    "message": "No active zone of this key matches the name.",
+    "details": {
+      "field": "name"
+    }
+  }
+}

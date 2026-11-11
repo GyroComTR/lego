@@ -1,0 +1,22 @@
+Name = "Gyro DNS"
+Description = '''The API token is an ACME key: it can only add and remove `_acme-challenge` TXT records.'''
+URL = "https://www.gyrohosting.com/"
+Code = "gyro"
+Since = "v5.7.0"
+
+Example = '''
+GYRO_API_TOKEN="xxx" \
+lego run --dns gyro -d '*.example.com' -d example.com
+'''
+
+[Configuration]
+  [Configuration.Credentials]
+    GYRO_API_TOKEN = "ACME key (Gyro DNS service page, ACME / Let's Encrypt section)"
+  [Configuration.Additional]
+    GYRO_BASE_URL = "API base URL (Default: https://www.gyrohosting.com/api/v1/client/)"
+    GYRO_POLLING_INTERVAL = "Time between DNS propagation check in seconds (Default: 5)"
+    GYRO_PROPAGATION_TIMEOUT = "Maximum waiting time for DNS propagation in seconds (Default: 120)"
+    GYRO_HTTP_TIMEOUT = "API request timeout in seconds (Default: 30)"
+
+[Links]
+  API = "https://www.gyrohosting.com/developers"
